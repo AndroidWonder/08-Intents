@@ -1,22 +1,26 @@
 package com.course.example.intents;
 
-import android.app.Activity; 
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.util.Log;
 
 public class LifeCycleTest extends Activity {
 
 	private Button btnFinish;
-	private TextView txtToDo, txtMsg;
+	private TextView txtToDo;
+	private EditText txtMsg;
+	private String tag = "LifeCycleTest";
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.lifecycle);
+		setContentView(R.layout.main);
 
 		txtToDo = (TextView) findViewById(R.id.txtToDo);
 		txtMsg = (EditText) findViewById(R.id.txtMsg);
@@ -28,15 +32,15 @@ public class LifeCycleTest extends Activity {
 				+ "3. Home		 (onPause, onStop)	 \n "
 				+ "4. After 3> App Tab> re-execute current app     \n "
 				+ "  (onRestart, onStart, onResume)		 \n ";
-				
+
 
 		txtToDo.setText(msg);
 		txtMsg.setHint("Enter some data here");
 
 		btnFinish = (Button) findViewById(R.id.btnFinish);
 
-		btnFinish.setOnClickListener(new Button.OnClickListener() {
-			@Override
+		btnFinish.setOnClickListener(new OnClickListener() {
+
 			public void onClick(View v) {
 				finish();
 			}
@@ -44,14 +48,16 @@ public class LifeCycleTest extends Activity {
 
 		Toast.makeText(this, "onCreate - Test", Toast.LENGTH_LONG)
 				.show();
+		Log.e(tag, "onCreate");
 	}//onCreate
-	
-	
+
+
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
 		Toast.makeText(this, "onDestroy - Test", Toast.LENGTH_LONG)
 				.show();
+		Log.e(tag, "onDestroy");
 	}
 
 	@Override
@@ -59,6 +65,7 @@ public class LifeCycleTest extends Activity {
 		super.onPause();
 		Toast.makeText(this, "onPause - Test", Toast.LENGTH_LONG)
 				.show();
+		Log.e(tag, "onPause");
 
 	}
 
@@ -67,6 +74,7 @@ public class LifeCycleTest extends Activity {
 		super.onRestart();
 		Toast.makeText(this, "onRestart - Test", Toast.LENGTH_LONG)
 				.show();
+		Log.e(tag, "onRestart");
 	}
 
 	@Override
@@ -74,6 +82,7 @@ public class LifeCycleTest extends Activity {
 		super.onResume();
 		Toast.makeText(this, "onResume - Test", Toast.LENGTH_LONG)
 				.show();
+		Log.e(tag, "onResume");
 	}
 
 	@Override
@@ -81,6 +90,7 @@ public class LifeCycleTest extends Activity {
 		super.onStart();
 		Toast.makeText(this, "onStart - Test", Toast.LENGTH_LONG)
 				.show();
+		Log.e(tag, "onStart");
 	}
 
 	@Override
@@ -88,6 +98,7 @@ public class LifeCycleTest extends Activity {
 		super.onStop();
 		Toast.makeText(this, "onStop - Test", Toast.LENGTH_LONG)
 				.show();
-	}	
-	
-}//LifeCycleTest
+		Log.e(tag, "onStop");
+	}
+
+}//LifeCycleTest}//LifeCycleTest

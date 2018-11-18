@@ -16,6 +16,5 @@
     </application>
     
     <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-sdk android:minSdkVersion="17" />
 
-</manifest> 
+</manifest>
