@@ -11,30 +11,30 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=" Life Cycle Explorer "
-        android:textStyle="bold" >
-    </TextView>
+        android:textStyle="bold" />
+
 
     <EditText
         android:id="@+id/txtMsg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp" >
-    </EditText>
+        android:textSize="18sp" />
+
 
     <Button
         android:id="@+id/btnFinish"
         android:layout_width="117dp"
         android:layout_height="49dp"
         android:text="Finish()"
-        android:textStyle="bold" >
-    </Button>
+        android:textStyle="bold" />
+
 
     <TextView
         android:id="@+id/txtToDo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#ff006699"
-        android:text="ToDo" >
-    </TextView>
+        android:text="ToDo" />
+
 
 </LinearLayout>
