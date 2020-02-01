@@ -58,7 +58,7 @@ public class Intents extends Activity implements OnClickListener {
       
          //implicit intent, call GoogleMaps 
         case R.id.second_button:
-            
+
         	Uri uri2 = Uri.parse("geo:42.3889167,-71.2208033?z=18");
         	//Uri uri2 = Uri.parse("geo:0,0?q=175+forest+street+waltham+ma");
             //Uri uri2 = Uri.parse("https://www.bentley.edu");
