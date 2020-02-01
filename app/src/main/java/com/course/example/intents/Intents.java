@@ -47,7 +47,7 @@ public class Intents extends Activity implements OnClickListener {
     }
 
     //avoids runtime check for permission to CALL_PHONE
-    public void onClick(View v) throws SecurityException {
+    public void onClick(View v)  {
         switch (v.getId()) { 
         
         //explicit intent
