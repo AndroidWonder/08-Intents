@@ -64,8 +64,9 @@ public class Intents extends Activity implements OnClickListener {
 
         	Intent i2 = new Intent(Intent.ACTION_VIEW,uri2);
           
-           /*For API18 and 19 Google Maps is not on Launch Pad
-             so should first check if Package is present to avoid app crashing.
+           /*
+                How to first check if GoogleMaps project is on the platform
+                  to avoid app crashing.
             */
             if (i2.resolveActivity(getPackageManager()) != null) {
     	        startActivity(i2);
