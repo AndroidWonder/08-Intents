@@ -74,7 +74,7 @@ public class Intents extends Activity implements OnClickListener {
             
            break;
        
-        //implicit intent, call dialer
+        //implicit intent, open dialer and make call
         case R.id.third_button:
         	Uri uri3 = Uri.parse("tel:6175551212");
         	Intent i3 = new Intent(Intent.ACTION_CALL,uri3);
