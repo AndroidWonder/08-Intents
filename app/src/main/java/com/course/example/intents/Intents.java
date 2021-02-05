@@ -6,8 +6,6 @@
  * As of API 23, using the Dialer also needs a permission in the
  * application's Settings.
  */
-
-
 package com.course.example.intents;
 
 import android.app.Activity;
