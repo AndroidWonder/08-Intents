@@ -3,8 +3,11 @@
  * The implicit intents call existing Android applications
  * Notice the permission in the Manifest file. We need this because
  * the app is placing a call, not just opening the dialer.
- * As of API 23, using the Dialer also needs a permission in the
+ * This is a dangerous permission so also needs a runtime permission in the
  * application's Settings.
+ *
+ * For privacy concerns, using the browser package, requires permission
+ * in the Manifest using <queries>.
  */
 package com.course.example.intents;
 
